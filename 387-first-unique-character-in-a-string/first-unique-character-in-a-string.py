@@ -7,7 +7,8 @@ class Solution(object):
         :rtype: int
         """
         count=Counter(s)
-        for i in range(len(s)):
+        n=len(s)
+        for i in range(n):
             if(count[s[i]] ==1):
                 return i
         return -1
