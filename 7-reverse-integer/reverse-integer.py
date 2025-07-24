@@ -6,7 +6,7 @@ class Solution(object):
         """
         res=0
         n=abs(x)
-        while n>0:
+        while n:
             res=res*10+n%10
             n//=10
         if x<0:
