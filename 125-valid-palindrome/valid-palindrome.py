@@ -13,7 +13,7 @@ class Solution(object):
     def extract_alphabet(self,s):
         new_string=""
         for i in s:
-            if i.isalpha() or i.isdigit():
+            if i.isalnum():
                 new_string+=i.lower()
         return new_string
         """
