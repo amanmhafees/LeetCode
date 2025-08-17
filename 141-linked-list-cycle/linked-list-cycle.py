@@ -6,13 +6,20 @@
 
 class Solution(object):
     def hasCycle(self, head):
-        myset=set()
-        curr=head
-        while(curr):
-            if(curr in myset):
+        # myset=set()
+        # curr=head
+        # while(curr):
+        #     if(curr in myset):
+        #         return True
+        #     myset.add(curr)
+        #     curr=curr.next
+        # return False
+        slow, fast = head, head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:   # they meet => cycle
                 return True
-            myset.add(curr)
-            curr=curr.next
         return False
         """
         :type head: ListNode
